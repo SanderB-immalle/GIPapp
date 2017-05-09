@@ -15,7 +15,10 @@ class CreateHighscoresTable extends Migration
     {
         Schema::create('highscores', function (Blueprint $table) {
             $table->increments('id');
-            $table->timestamps();
+            $table->integer('playerid');
+            $table->integer('gameid');
+            $table->integer('score');
+            $table->datetime('time');
         });
     }
 
