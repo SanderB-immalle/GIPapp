@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/registerplayer',function(){
+    return view('registerplayer');    
+});
+
+Route::get('/registerdev',function(){
+    return view('registerdev');    
+});
