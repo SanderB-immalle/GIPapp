@@ -26,3 +26,6 @@ Route::get('/registerplayer',function(){
 Route::get('/registerdev',function(){
     return view('registerdev');    
 });
+
+Route::post('/players', 'PlayerController@register');
+Route::post('/developers', 'DeveloperController@register');
