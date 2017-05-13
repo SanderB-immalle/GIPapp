@@ -16,9 +16,11 @@ class CreateDevelopersTable extends Migration
         Schema::create('developers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('company_name');
             $table->string('email')->unique();
             $table->string('password');
-
+            $table->datetime('updated_at');
+            $table->datetime('created_at');
         });
     }
 

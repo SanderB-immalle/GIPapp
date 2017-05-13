@@ -18,6 +18,8 @@ class CreatePlayersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->datetime('updated_at');
+            $table->datetime('created_at');
         });
     }
 
