@@ -6,5 +6,19 @@ use Illuminate\Http\Request;
 
 class DeveloperController extends Controller
 {
-    //
+    public function register()
+    {
+
+
+        $post = new Developer;
+
+        $post->name = request('name');
+        $post->company_name = request('company_name');
+        $post->email = request('email');
+        $post->password = request('password');
+
+        $post->save();
+
+        return redirect('/');
+    }
 }
